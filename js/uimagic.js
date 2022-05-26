@@ -9,8 +9,18 @@ let shareResults = []
 
 function buildSearchList() {
     let list = document.getElementById('cars')
-
-    allVehiclesDetails.forEach(function(item){
+    const sortedVehicles = allVehiclesDetails.sort(function(a,b) {
+        const bigA = a.name.toUpperCase();
+        const bigB = b.name.toUpperCase();
+        if(bigA < bigB) {
+            return -1;
+        }
+        if(bigA > bigB) {
+            return 1;
+        }
+        return 0;
+    })
+    sortedVehicles.forEach(function(item){
         let option = document.createElement('option')
         option.value = item.name
         list.appendChild(option)
