@@ -14,7 +14,7 @@
     <h1>Cardle</h1>
 
     <div id="car-selector-container">
-      <input id="car-selector" list="cars" placeholder="Guess a car">
+      <input id="car-selector" list="cars" placeholder="   Guess a car">
       <a href="#" class="submit" onclick="answerSubmitted()">Guess</a>
       <datalist id="cars"></datalist>
     </div>
@@ -107,6 +107,7 @@
       <h2 id="popup-correct">A really cool car</h2>
       <a href="#" class="share" onclick="share()">Share</a>
       <a href="#" class="submit" onclick="location.reload()">Play again</a>
+      <p id="popup-share-text" style="display: none">Result copied to clipboard</p>
     </div>
 
     <div id="opaque"></div>

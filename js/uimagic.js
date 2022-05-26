@@ -1,9 +1,11 @@
 const jsConfetti = new JSConfetti()
+const shareEmoji = ['⬛', '🟩', '⬇️', '⬆️']
 
 buildSearchList()
 
 let guessNumber = 1
 let gameComplete = false
+let shareResults = []
 
 function buildSearchList() {
     let list = document.getElementById('cars')
@@ -63,6 +65,7 @@ function answerSubmitted() {
 
     guessNumber++
 
+    shareResults.push(result)
     checkWinOrLoss(result)
 }
 
@@ -118,5 +121,26 @@ function lossfetti() {
 }
 
 function share() {
-    console.log("share")
+    let indexOfVehicle = allVehiclesDetails.indexOf(allVehiclesDetails.filter(obj => { return obj.name === vehicleToGuess.name })[0])
+
+    let output = "Cardle-" + indexOfVehicle + " " + shareResults.length + "/6" + "\n"
+
+    for (let outValue of shareResults) {
+        output += "\n" + shareEmoji[outValue[0]] + shareEmoji[outValue[1]] + shareEmoji[outValue[2]] + shareEmoji[outValue[3]] + shareEmoji[outValue[4]]
+    }
+
+    copyTextToClipboard(output)
+}
+
+function copyTextToClipboard(text) {
+    if (!navigator.clipboard) {
+        fallbackCopyTextToClipboard(text)
+        return
+    }
+    navigator.clipboard.writeText(text).then(function() {
+        console.log('Async: Copying to clipboard was successful!')
+        document.getElementById('popup-share-text').style.display = 'block'
+    }, function(err) {
+        console.error('Async: Could not copy text: ', err)
+    });
 }
