@@ -39,7 +39,7 @@ lint-test-job:   # This job also runs in the test stage.
     - echo "No issues found."
 
 deploy-job:      # This job runs in the deploy stage.  
-  image: python:latest
+  # image: python:latest
   stage: deploy  # It only runs when *both* jobs in the test stage complete successfully. 
   script:
     - echo "Deploying application..."
