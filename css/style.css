@@ -1,0 +1,146 @@
+body {
+    background-color: #f9fafb;
+    font-family: 'Helvetica Neue',Arial,Helvetica,sans-serif;;
+}
+
+/*Color Sheet*/
+:root {
+    --background-color: #d7dadc;
+    --text-color: #f9fafb;
+    --no-guess:#121213;
+    --incorrect-guess:#797c7e;
+    --almost-guess:#c6b466;
+    --correct-guess:#79a76b;
+}
+
+#gameHeader{
+    text-align: center;
+    width: 75vw;
+    max-width: 500px;
+    margin: auto;
+    margin-bottom: 20px;
+ }
+
+#gameBoard {
+    display: grid;
+    height: 75vh;
+    width: 75vw;
+    grid-template-columns: repeat(6, 80px);
+    grid-template-rows: repeat(7, 80px);
+    grid-column-gap: 10px;
+    grid-row-gap: 15px;
+    justify-content: center;
+    justify-self: center;
+    margin: auto;
+ }
+
+ #car-selector {
+     width: 200px;
+     height: 40px;
+ }
+
+.tileHeader {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 10pt;
+}
+
+.gussedCar {
+    color: black;
+    text-align: center;
+    font-size: 14pt;
+}
+
+ /*Styling for each of the grid squares*/
+ .wordleTile {
+    position: relative;
+    display: inline-flex;
+    width: 100%;
+    height: 100%;
+    justify-self: center;
+    justify-content: center;
+    background-color: var(--background-color);
+    border: solid var(--incorrect-guess);
+ }
+
+ .submit {
+    background-color: #383838;
+    border: none;
+    color: #e7e7e7;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+  .share {
+    background-color: #4CAF50;
+    border: none;
+    color: #e7e7e7;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+  .details {
+      color: var(--text-color);
+      z-index: 9;
+      margin-top: 30px;
+      font-size: 8pt;
+  }
+
+  .arrow-up {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 40px solid black;
+    margin-top: 12px;
+  }
+  
+  .arrow-down {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-top: 40px solid black;
+    margin-top: 27px;
+  }
+
+  #popup {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -75%);
+    width: 400px;
+    height: 400px;
+    background-color: #f9fafb;
+    box-shadow: 1px 1px #888888;
+    padding: 10px 20px 10px 20px;
+    border: 1px solid #121213;
+    z-index: 1001;
+    text-align: center;
+  }
+
+#popup-title {
+  margin-top: 70px;
+}
+
+#opaque {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  background-color: black;
+  filter: alpha(opacity=30);
+  opacity: 0.8;
+}
