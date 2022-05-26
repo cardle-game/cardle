@@ -36,8 +36,9 @@ body {
  }
 
  #car-selector {
-     width: 200px;
+     width: 190px;
      height: 40px;
+     padding-left: 10px;
  }
 
 .tileHeader {
@@ -97,20 +98,20 @@ body {
     position: absolute;
     width: 0;
     height: 0;
-    border-left: 30px solid transparent;
-    border-right: 30px solid transparent;
-    border-bottom: 40px solid black;
-    margin-top: 12px;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-bottom: 50px solid black;
+    margin-top: 5px;
   }
   
   .arrow-down {
     position: absolute;
     width: 0;
     height: 0;
-    border-left: 30px solid transparent;
-    border-right: 30px solid transparent;
-    border-top: 40px solid black;
-    margin-top: 27px;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-top: 50px solid black;
+    margin-top: 25px;
   }
 
   #popup {
