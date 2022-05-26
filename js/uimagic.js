@@ -34,31 +34,31 @@ function answerSubmitted() {
     getColourFromResult(document.getElementById('row' + guessNumber + 'col1'), result[0])
     details = document.createElement('p')
     details.classList.add("details")
-    details.innerHTML = carDetails?.yearOfManufacture || "N/A"
+    details.innerHTML = carDetails?.yearOfManufacture || "-"
     document.getElementById('row' + guessNumber + 'col1').appendChild(details)
 
     getColourFromResult(document.getElementById('row' + guessNumber + 'col2'), result[1])
     details = document.createElement('p')
     details.classList.add("details")
-    details.innerHTML = (carDetails?.co2Emissions || "N/A") + " g/km" 
+    details.innerHTML = (carDetails?.co2Emissions || "-") + " g/km" 
     document.getElementById('row' + guessNumber + 'col2').appendChild(details)
 
     getColourFromResult(document.getElementById('row' + guessNumber + 'col3'), result[2])
     details = document.createElement('p')
     details.classList.add("details")
-    details.innerHTML = (carDetails?.cylinderCapacity || "N/A") + "cc"
+    details.innerHTML = (carDetails?.cylinderCapacity || "-") + " cc"
     document.getElementById('row' + guessNumber + 'col3').appendChild(details)
 
     getColourFromResult(document.getElementById('row' + guessNumber + 'col4'), result[3])
     details = document.createElement('p')
     details.classList.add("details")
-    details.innerHTML = carDetails?.fuelType || "N/A"
+    details.innerHTML = carDetails?.fuelType || "-"
     document.getElementById('row' + guessNumber + 'col4').appendChild(details)
 
     getColourFromResult(document.getElementById('row' + guessNumber + 'col5'), result[4])
     details = document.createElement('p')
     details.classList.add("details")
-    details.innerHTML = carDetails?.motFails || "N/A"
+    details.innerHTML = carDetails?.motFails || "-"
     document.getElementById('row' + guessNumber + 'col5').appendChild(details)
 
     guessNumber++
