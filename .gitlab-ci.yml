@@ -39,11 +39,12 @@ lint-test-job:   # This job also runs in the test stage.
     - echo "No issues found."
 
 deploy-job:      # This job runs in the deploy stage.  
-  # image: 
+  image: python:latest
   stage: deploy  # It only runs when *both* jobs in the test stage complete successfully. 
   script:
     - echo "Deploying application..."
-    - docker image ls 
+
+    #- docker image ls 
     # - export AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID             # set up with temp gitlab user for hackathon to only allow access to list the s3 bucket cardol-wordle-but-for-cars
     # - export AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY     # set up with temp gitlab user for hackathon to only allow access to list the s3 bucket cardol-wordle-but-for-cars
     # - aws s3 ls # - echo $check_gitlab_variables #aws s3 cp ./ s3://cardol-wordle-but-for-cars/ --recursive --exclude "*" --include "*.html"
