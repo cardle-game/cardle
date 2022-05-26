@@ -40,13 +40,13 @@ function answerSubmitted() {
     getColourFromResult(document.getElementById('row' + guessNumber + 'col2'), result[1])
     details = document.createElement('p')
     details.classList.add("details")
-    details.innerHTML = carDetails?.co2Emissions + " g/km" || "N/A"
+    details.innerHTML = (carDetails?.co2Emissions || "N/A") + " g/km" 
     document.getElementById('row' + guessNumber + 'col2').appendChild(details)
 
     getColourFromResult(document.getElementById('row' + guessNumber + 'col3'), result[2])
     details = document.createElement('p')
     details.classList.add("details")
-    details.innerHTML = carDetails?.cylinderCapacity + "cc" || "N/A"
+    details.innerHTML = (carDetails?.cylinderCapacity || "N/A") + "cc"
     document.getElementById('row' + guessNumber + 'col3').appendChild(details)
 
     getColourFromResult(document.getElementById('row' + guessNumber + 'col4'), result[3])
