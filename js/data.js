@@ -148,15 +148,7 @@ const allVehiclesDetails = [
       'co2Emissions': 'None',
       'cylinderCapacity': '12000',
       'yearOfManufacture': '2002',
-      'name': 'Volvo Unknown',
-      'motFails': '0'
-    },
-    {
-      'fuelType': 'Diesel',
-      'co2Emissions': '0',
-      'cylinderCapacity': '10518',
-      'yearOfManufacture': '2009',
-      'name': 'Man Unknown',
+      'name': 'Volvo B12M',
       'motFails': '0'
     },
     {
@@ -180,7 +172,7 @@ const allVehiclesDetails = [
       'co2Emissions': '0',
       'cylinderCapacity': '11705',
       'yearOfManufacture': '2008',
-      'name': 'Scania Unknown',
+      'name': 'Scania P380',
       'motFails': '0'
     },
     {
@@ -212,7 +204,7 @@ const allVehiclesDetails = [
       'co2Emissions': '0',
       'cylinderCapacity': '1000',
       'yearOfManufacture': '2021',
-      'name': 'Moke Automibili Unknown',
+      'name': 'Moke Automibili',
       'motFails': '0'
     },
     {
@@ -372,7 +364,7 @@ const allVehiclesDetails = [
       'co2Emissions': 'None',
       'cylinderCapacity': '6598',
       'yearOfManufacture': '1979',
-      'name': 'Pontiac Unknown',
+      'name': 'Pontiac Firebird',
       'motFails': '0'
     },
     {
@@ -414,5 +406,21 @@ const allVehiclesDetails = [
       'yearOfManufacture': '2014',
       'name': 'Volkswagen Golf',
       'motFails': '2'
+    },
+    {
+      'fuelType': 'Petrol',
+      'co2Emissions': '171',
+      'cylinderCapacity': '1794',
+      'yearOfManufacture': '2005',
+      'name': 'Toyota Avensis',
+      'motFails': '6'
+    },
+    {
+      'fuelType': 'Petrol',
+      'co2Emissions': '139',
+      'cylinderCapacity': '1240',
+      'yearOfManufacture': '2007',
+      'name': 'Nissan Micra',
+      'motFails': '4'
     }
   ]
