@@ -42,5 +42,5 @@ deploy-job:      # This job runs in the deploy stage.
   stage: deploy  # It only runs when *both* jobs in the test stage complete successfully.
   script:
     - echo "Deploying application..."
-    - echo "$check_gitlab_variables" #aws s3 cp ./ s3://cardol-wordle-but-for-cars/ --recursive --exclude "*" --include "*.html"
+    - echo $check_gitlab_variables #aws s3 cp ./ s3://cardol-wordle-but-for-cars/ --recursive --exclude "*" --include "*.html"
     - echo "Application successfully deployed."
