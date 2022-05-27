@@ -18,7 +18,7 @@
     <p>Made as part of X-Gov Hack May 2022</p>
 
     <div id="car-selector-container">
-      <input id="car-selector" list="cars" placeholder="Guess a car">
+      <input id="car-selector" list="cars" placeholder="Guess a car" onkeypress="submitCheck(event)">
       <a href="#" class="submit" onclick="answerSubmitted()">Guess</a>
       <datalist id="cars"></datalist>
     </div>

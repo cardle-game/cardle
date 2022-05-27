@@ -27,6 +27,12 @@ function buildSearchList() {
      })
 }
 
+function submitCheck(event) {
+    if(event.key === 'Enter') {
+        answerSubmitted()
+    }
+}
+
 function answerSubmitted() {
     if (gameComplete) {
         return
