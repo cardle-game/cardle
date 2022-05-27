@@ -38,62 +38,66 @@ function answerSubmitted() {
     console.log("The user attempted to guess: " + input)
     // Call guessLogics
     let result = makeGuess(input)
+    if(result === 'invalid') {
+        iqwerty.toast.toast('Please choose a car from the list!');
+    } else {
     // Update board
-    document.getElementById('row' + guessNumber + 'col0-guess').innerHTML = input;
+        document.getElementById('row' + guessNumber + 'col0-guess').innerHTML = input;
 
-    carDetails = allVehiclesDetails.filter(obj => { return obj.name === input })[0]
+        carDetails = allVehiclesDetails.filter(obj => { return obj.name === input })[0]
 
-    getColourFromResult(document.getElementById('row' + guessNumber + 'col1'), result[0])
-    details = document.createElement('p')
-    details.classList.add("details")
-    details.innerHTML = carDetails?.yearOfManufacture || "-"
-    document.getElementById('row' + guessNumber + 'col1').appendChild(details)
+        getColourFromResult(document.getElementById('row' + guessNumber + 'col1'), result[0])
+        details = document.createElement('p')
+        details.classList.add("details")
+        details.innerHTML = carDetails?.yearOfManufacture || "-"
+        document.getElementById('row' + guessNumber + 'col1').appendChild(details)
 
-    getColourFromResult(document.getElementById('row' + guessNumber + 'col2'), result[1])
-    details = document.createElement('p')
-    details.classList.add("details")
-    details.innerHTML = (carDetails?.co2Emissions || "-") + " g/km" 
-    document.getElementById('row' + guessNumber + 'col2').appendChild(details)
+        getColourFromResult(document.getElementById('row' + guessNumber + 'col2'), result[1])
+        details = document.createElement('p')
+        details.classList.add("details")
+        details.innerHTML = (carDetails?.co2Emissions || "-") + " g/km" 
+        document.getElementById('row' + guessNumber + 'col2').appendChild(details)
 
-    getColourFromResult(document.getElementById('row' + guessNumber + 'col3'), result[2])
-    details = document.createElement('p')
-    details.classList.add("details")
-    details.innerHTML = (carDetails?.cylinderCapacity || "-") + " cc"
-    document.getElementById('row' + guessNumber + 'col3').appendChild(details)
+        getColourFromResult(document.getElementById('row' + guessNumber + 'col3'), result[2])
+        details = document.createElement('p')
+        details.classList.add("details")
+        details.innerHTML = (carDetails?.cylinderCapacity || "-") + " cc"
+        document.getElementById('row' + guessNumber + 'col3').appendChild(details)
 
-    getColourFromResult(document.getElementById('row' + guessNumber + 'col4'), result[3])
-    details = document.createElement('p')
-    details.classList.add("details")
-    details.innerHTML = carDetails?.fuelType || "-"
-    document.getElementById('row' + guessNumber + 'col4').appendChild(details)
+        getColourFromResult(document.getElementById('row' + guessNumber + 'col4'), result[3])
+        details = document.createElement('p')
+        details.classList.add("details")
+        details.innerHTML = carDetails?.fuelType || "-"
+        document.getElementById('row' + guessNumber + 'col4').appendChild(details)
 
-    getColourFromResult(document.getElementById('row' + guessNumber + 'col5'), result[4])
-    details = document.createElement('p')
-    details.classList.add("details")
-    details.innerHTML = carDetails?.motFails || "-"
-    document.getElementById('row' + guessNumber + 'col5').appendChild(details)
+        getColourFromResult(document.getElementById('row' + guessNumber + 'col5'), result[4])
+        details = document.createElement('p')
+        details.classList.add("details")
+        details.innerHTML = carDetails?.motFails || "-"
+        document.getElementById('row' + guessNumber + 'col5').appendChild(details)
 
-    guessNumber++
+        guessNumber++
 
-    shareResults.push(result)
-    checkWinOrLoss(result)
-}
+        shareResults.push(result)
+        checkWinOrLoss(result)
+        }
+    }
 
-function getColourFromResult(element, result) {
-    if (result == 0) {
-        element.style.backgroundColor = "#797c7e" // No Match
-    } else if (result == 1) {
-        element.style.backgroundColor = "#79a76b" // Match
-    } else if (result == 2) {
-        element.style.backgroundColor = "#c6b466" // Lower
-        let arrow = document.createElement('div')
-        arrow.classList.add("arrow-down")
-        element.appendChild(arrow)
-    } else if (result == 3) {
-        element.style.backgroundColor = "#c6b466" // Higher
-        let arrow = document.createElement('div')
-        arrow.classList.add("arrow-up")
-        element.appendChild(arrow)
+    function getColourFromResult(element, result) {
+        if (result == 0) {
+            element.style.backgroundColor = "#797c7e" // No Match
+        } else if (result == 1) {
+            element.style.backgroundColor = "#79a76b" // Match
+        } else if (result == 2) {
+            element.style.backgroundColor = "#c6b466" // Lower
+            let arrow = document.createElement('div')
+            arrow.classList.add("arrow-down")
+            element.appendChild(arrow)
+        } else if (result == 3) {
+            element.style.backgroundColor = "#c6b466" // Higher
+            let arrow = document.createElement('div')
+            arrow.classList.add("arrow-up")
+            element.appendChild(arrow)
     }
 }
 

@@ -21,7 +21,7 @@ function makeGuess(guess) {
         return [1,1,1,1,1]
     } else if(filtered.length === 0) {
         console.log("name not in list")
-        return [0,0,0,0,0]
+        return 'invalid'
     } else {
         let resultArray = []
         let vehicleObject = filtered[0]
