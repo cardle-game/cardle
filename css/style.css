@@ -146,3 +146,5 @@ body {
   filter: alpha(opacity=30);
   opacity: 0.8;
 }
+
+@keyframes spin2 { 100% { transform:rotateX(-360deg); } }

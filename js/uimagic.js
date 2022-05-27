@@ -50,30 +50,37 @@ function answerSubmitted() {
         details = document.createElement('p')
         details.classList.add("details")
         details.innerHTML = carDetails?.yearOfManufacture || "-"
+        document.getElementById('row' + guessNumber + 'col1').style.animation="spin2 1s"
         document.getElementById('row' + guessNumber + 'col1').appendChild(details)
+
+
 
         getColourFromResult(document.getElementById('row' + guessNumber + 'col2'), result[1])
         details = document.createElement('p')
         details.classList.add("details")
-        details.innerHTML = (carDetails?.co2Emissions || "-") + " g/km" 
+        details.innerHTML = (carDetails?.co2Emissions || "-") + " g/km"
+        document.getElementById('row' + guessNumber + 'col2').style.animation="spin2 1s 0.15s"
         document.getElementById('row' + guessNumber + 'col2').appendChild(details)
 
         getColourFromResult(document.getElementById('row' + guessNumber + 'col3'), result[2])
         details = document.createElement('p')
         details.classList.add("details")
         details.innerHTML = (carDetails?.cylinderCapacity || "-") + " cc"
+        document.getElementById('row' + guessNumber + 'col3').style.animation="spin2 1s 0.3s"
         document.getElementById('row' + guessNumber + 'col3').appendChild(details)
 
         getColourFromResult(document.getElementById('row' + guessNumber + 'col4'), result[3])
         details = document.createElement('p')
         details.classList.add("details")
         details.innerHTML = carDetails?.fuelType || "-"
+        document.getElementById('row' + guessNumber + 'col4').style.animation="spin2 1s 0.45s"
         document.getElementById('row' + guessNumber + 'col4').appendChild(details)
 
         getColourFromResult(document.getElementById('row' + guessNumber + 'col5'), result[4])
         details = document.createElement('p')
         details.classList.add("details")
         details.innerHTML = carDetails?.motFails || "-"
+        document.getElementById('row' + guessNumber + 'col5').style.animation="spin2 1s 0.6s"
         document.getElementById('row' + guessNumber + 'col5').appendChild(details)
 
         guessNumber++
