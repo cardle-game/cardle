@@ -305,7 +305,7 @@ const allVehiclesDetails = [
     },
     {
       'fuelType': 'Diesel',
-      'co2Emissions': '299',
+      'co2Emissions': '299', //HRH's Land Rover
       'cylinderCapacity': '2495',
       'yearOfManufacture': '2002',
       'name': 'Land Rover Defender',
@@ -313,7 +313,7 @@ const allVehiclesDetails = [
     },
     {
       'fuelType': 'Petrol',
-      'co2Emissions': 'None',
+      'co2Emissions': 'None',//HRH's Roll's Royce
       'cylinderCapacity': '6745',
       'yearOfManufacture': '1971',
       'name': 'Rolls Royce Silver',

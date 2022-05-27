@@ -25,9 +25,13 @@ function makeGuess(guess) {
     } else {
         let resultArray = []
         let vehicleObject = filtered[0]
+        const vtgCcAsNumber = parseInt(vehicleToGuess.cylinderCapacity)
+        const voCcAsNumber = parseInt(vehicleObject.cylinderCapacity)
+        const vtgCo2Emissions = parseInt(vehicleToGuess.co2Emissions)
+        const voCo2Emissions = parseInt(vehicleObject.co2Emissions)
         resultArray.push(vehicleToGuess.yearOfManufacture === vehicleObject.yearOfManufacture ? 1 : vehicleToGuess.yearOfManufacture > vehicleObject.yearOfManufacture ? 3 : 2)
-        resultArray.push(vehicleToGuess.co2Emissions === vehicleObject.co2Emissions ? 1 : vehicleToGuess.co2Emissions > vehicleObject.co2Emissions ? 3 : 2)
-        resultArray.push(vehicleToGuess.cylinderCapacity === vehicleObject.cylinderCapacity ? 1 : vehicleToGuess.cylinderCapacity > vehicleObject.cylinderCapacity ? 3 : 2)
+        resultArray.push(vtgCo2Emissions === voCo2Emissions ? 1 : vtgCo2Emissions > voCo2Emissions ? 3 : 2) 
+        resultArray.push(vtgCcAsNumber === voCcAsNumber ? 1 : vtgCcAsNumber > voCcAsNumber ? 3 : 2)
         resultArray.push(vehicleToGuess.fuelType === vehicleObject.fuelType ? 1 : 0 )
         resultArray.push(vehicleToGuess.motFails === vehicleObject.motFails ? 1 : vehicleToGuess.motFails > vehicleObject.motFails ? 3 : 2 )
         return resultArray;
