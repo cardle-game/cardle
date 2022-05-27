@@ -108,6 +108,7 @@ function checkWinOrLoss(result) {
         document.getElementById('popup-correct').innerHTML = vehicleToGuess.name
         document.getElementById('popup').style.display = 'block'
         document.getElementById('opaque').style.display = 'block'
+        winSound()
         carfetti()
     } else if (guessNumber > 6) {
         gameComplete = true
@@ -115,6 +116,7 @@ function checkWinOrLoss(result) {
         document.getElementById('popup-correct').innerHTML = vehicleToGuess.name
         document.getElementById('popup').style.display = 'block'
         document.getElementById('opaque').style.display = 'block'
+        loseSound()
         lossfetti()
     }
 }
@@ -157,4 +159,14 @@ function copyTextToClipboard(text) {
     }, function(err) {
         console.error('Async: Could not copy text: ', err)
     });
+}
+
+function winSound() {
+    let winAudio = new Audio('assets/mixkit-instant-win-2021.wav')
+    winAudio.play()
+}
+
+function loseSound() {
+    let loseAudio = new Audio('assets/mixkit-losing-bleeps-2026.wav')
+    loseAudio.play()
 }
