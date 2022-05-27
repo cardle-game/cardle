@@ -428,14 +428,6 @@ const allVehiclesDetails = [
       'co2Emissions': '0',
       'cylinderCapacity': '0',
       'yearOfManufacture': '2020',
-      'name': 'Toyota Mirai',
-      'motFails': '0'
-    },
-    {
-      'fuelType': 'Electricity',
-      'co2Emissions': '0',
-      'cylinderCapacity': '0',
-      'yearOfManufacture': '2020',
       'name': 'Mini Cooper',
       'motFails': '0'
     },
