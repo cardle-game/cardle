@@ -46,47 +46,60 @@ function answerSubmitted() {
 
         carDetails = allVehiclesDetails.filter(obj => { return obj.name === input })[0]
 
-        getColourFromResult(document.getElementById('row' + guessNumber + 'col1'), result[0])
-        details = document.createElement('p')
-        details.classList.add("details")
-        details.innerHTML = carDetails?.yearOfManufacture || "-"
-        document.getElementById('row' + guessNumber + 'col1').style.animation="spin2 2s"
-        document.getElementById('row' + guessNumber + 'col1').appendChild(details)
+        details1 = document.createElement('p')
+        details1.classList.add("details")
+        details1.innerHTML = carDetails?.yearOfManufacture || "-"
+        let elementOne = document.getElementById('row' + guessNumber + 'col1')
+        elementOne.style.animation="spin2 2s"
+        elementOne.onanimationend = () => {
+            getColourFromResult(document.getElementById('row' + guessNumber + 'col1'), result[0])
+            document.getElementById('row' + guessNumber + 'col1').appendChild(details1)
+        }
 
+        details2 = document.createElement('p')
+        details2.classList.add("details")
+        details2.innerHTML = (carDetails?.co2Emissions || "-") + " g/km"
+        let elementTwo = document.getElementById('row' + guessNumber + 'col2')
+        elementTwo.style.animation="spin2 2s 0.15s"
+        elementTwo.onanimationend = () => {
+            getColourFromResult(document.getElementById('row' + guessNumber + 'col2'), result[1])
+            document.getElementById('row' + guessNumber + 'col2').appendChild(details2)
+        }
 
+        details3 = document.createElement('p')
+        details3.classList.add("details")
+        details3.innerHTML = (carDetails?.cylinderCapacity || "-") + " cc"
+        let elementThree = document.getElementById('row' + guessNumber + 'col3')
+        elementThree.style.animation="spin2 2s 0.3s"
+        elementThree.onanimationend = () => {
+            getColourFromResult(document.getElementById('row' + guessNumber + 'col3'), result[2])
+            document.getElementById('row' + guessNumber + 'col3').appendChild(details3)
+        }
 
-        getColourFromResult(document.getElementById('row' + guessNumber + 'col2'), result[1])
-        details = document.createElement('p')
-        details.classList.add("details")
-        details.innerHTML = (carDetails?.co2Emissions || "-") + " g/km"
-        document.getElementById('row' + guessNumber + 'col2').style.animation="spin2 2s 0.15s"
-        document.getElementById('row' + guessNumber + 'col2').appendChild(details)
+        details4 = document.createElement('p')
+        details4.classList.add("details")
+        details4.innerHTML = carDetails?.fuelType || "-"
+        let elementFour = document.getElementById('row' + guessNumber + 'col4')
+        elementFour.style.animation="spin2 2s 0.45s"
+        elementFour.onanimationend = () => {
+            getColourFromResult(document.getElementById('row' + guessNumber + 'col4'), result[3])
+            document.getElementById('row' + guessNumber + 'col4').appendChild(details4)
+        }
 
-        getColourFromResult(document.getElementById('row' + guessNumber + 'col3'), result[2])
-        details = document.createElement('p')
-        details.classList.add("details")
-        details.innerHTML = (carDetails?.cylinderCapacity || "-") + " cc"
-        document.getElementById('row' + guessNumber + 'col3').style.animation="spin2 2s 0.3s"
-        document.getElementById('row' + guessNumber + 'col3').appendChild(details)
+        details5 = document.createElement('p')
+        details5.classList.add("details")
+        details5.innerHTML = carDetails?.motFails || "-"
+        let elementFive = document.getElementById('row' + guessNumber + 'col5')
+        elementFive.style.animation="spin2 2s 0.6s"
+        elementFive.onanimationend = () => {
+            getColourFromResult(document.getElementById('row' + guessNumber + 'col5'), result[4])
+            document.getElementById('row' + guessNumber + 'col5').appendChild(details5)
 
-        getColourFromResult(document.getElementById('row' + guessNumber + 'col4'), result[3])
-        details = document.createElement('p')
-        details.classList.add("details")
-        details.innerHTML = carDetails?.fuelType || "-"
-        document.getElementById('row' + guessNumber + 'col4').style.animation="spin2 2s 0.45s"
-        document.getElementById('row' + guessNumber + 'col4').appendChild(details)
+            guessNumber++
 
-        getColourFromResult(document.getElementById('row' + guessNumber + 'col5'), result[4])
-        details = document.createElement('p')
-        details.classList.add("details")
-        details.innerHTML = carDetails?.motFails || "-"
-        document.getElementById('row' + guessNumber + 'col5').style.animation="spin2 2s 0.6s"
-        document.getElementById('row' + guessNumber + 'col5').appendChild(details)
-
-        guessNumber++
-
-        shareResults.push(result)
-        checkWinOrLoss(result)
+            shareResults.push(result)
+            checkWinOrLoss(result)
+        }
         }
     }
 
