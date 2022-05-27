@@ -167,6 +167,6 @@ function winSound() {
 }
 
 function loseSound() {
-    let loseAudio = new Audio('assets/mixkit-losing-bleeps-2026.wav')
+    let loseAudio = new Audio('assets/fail-trombone-02.mp3')
     loseAudio.play()
 }
