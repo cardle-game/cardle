@@ -340,7 +340,7 @@ const allVehiclesDetails = [
       'co2Emissions': '0',
       'cylinderCapacity': '0',
       'yearOfManufacture': '2020',
-      'name': 'Polestar Polestar',
+      'name': 'Polestar 2',
       'motFails': '0'
     },
     {
@@ -422,5 +422,93 @@ const allVehiclesDetails = [
       'yearOfManufacture': '2007',
       'name': 'Nissan Micra',
       'motFails': '4'
+    },
+    {
+      'fuelType': 'Electricity',
+      'co2Emissions': '0',
+      'cylinderCapacity': '0',
+      'yearOfManufacture': '2020',
+      'name': 'Toyota Mirai',
+      'motFails': '0'
+    },
+    {
+      'fuelType': 'Electricity',
+      'co2Emissions': '0',
+      'cylinderCapacity': '0',
+      'yearOfManufacture': '2020',
+      'name': 'Mini Cooper',
+      'motFails': '0'
+    },
+    {
+      'fuelType': 'Electricity',
+      'co2Emissions': '0',
+      'cylinderCapacity': '0',
+      'yearOfManufacture': '2021',
+      'name': 'Volkswagen Id3',
+      'motFails': '0'
+    },
+    {
+      'fuelType': 'Electricity',
+      'co2Emissions': '0',
+      'cylinderCapacity': '0',
+      'yearOfManufacture': '2016',
+      'name': 'Tesla Model S',
+      'motFails': '0'
+    },
+    {
+      'fuelType': 'Diesel',
+      'co2Emissions': '120',
+      'cylinderCapacity': '1968',
+      'yearOfManufacture': '2014',
+      'name': 'Volkswagen Cc',
+      'motFails': '3'
+    },
+    {
+      'fuelType': 'Diesel',
+      'co2Emissions': '146',
+      'cylinderCapacity': '1968',
+      'yearOfManufacture': '2006',
+      'name': 'Audi A3',
+      'motFails': '1'
+    },
+    {
+      'fuelType': 'Diesel',
+      'co2Emissions': '144',
+      'cylinderCapacity': '1968',
+      'yearOfManufacture': '2008',
+      'name': 'Audi A4',
+      'motFails': '2'
+    },
+    {
+      'fuelType': 'Petrol',
+      'co2Emissions': '383',
+      'cylinderCapacity': '6162',
+      'yearOfManufacture': '2008',
+      'name': 'General Motors Cadillac',
+      'motFails': '3'
+    },
+    {
+      'fuelType': 'Petrol',
+      'co2Emissions': '128',
+      'cylinderCapacity': '999',
+      'yearOfManufacture': '2021',
+      'name': 'Dacia Sandero',
+      'motFails': '0'
+    },
+    {
+      'fuelType': 'Petrol',
+      'co2Emissions': '0',
+      'cylinderCapacity': '125',
+      'yearOfManufacture': '2019',
+      'name': 'Lexmoto Titan',
+      'motFails': '0'
+    },
+    {
+      'fuelType': 'Diesel',
+      'co2Emissions': '99',
+      'cylinderCapacity': '1461',
+      'yearOfManufacture': '2018',
+      'name': 'Nissan Qashqai',
+      'motFails': '0'
     }
   ]
