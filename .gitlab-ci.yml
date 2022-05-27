@@ -55,4 +55,5 @@ deploy-job:      # This job runs in the deploy stage.
     - aws s3 ls # - echo $check_gitlab_variables #aws s3 cp ./ s3://cardol-wordle-but-for-cars/ --recursive --exclude "*" --include "*.html"
     - cat README.md
     - aws s3 cp /builds/xgov-hack-05-2022/cardle-front-end/ s3://cardol-wordle-but-for-cars/ --recursive --exclude "awscliv2.zip" --exclude "aws" 
+    - aws s3 cp /builds/xgov-hack-05-2022/cardle-front-end/ s3://cardle-wordle-but-for-cars/ --recursive --exclude "awscliv2.zip" --exclude "aws" 
     - echo "end of Application deploy steps."
