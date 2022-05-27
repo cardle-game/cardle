@@ -39,8 +39,6 @@ function answerSubmitted() {
         return
     }
 
-    guessLockout = true
-
     // Get the input
     let input = document.getElementById('car-selector').value
     document.getElementById('car-selector').value = ""
@@ -50,6 +48,7 @@ function answerSubmitted() {
     if(result === 'invalid') {
         iqwerty.toast.toast('Please choose a car from the list!');
     } else {
+        guessLockout = true
     // Update board
         document.getElementById('row' + guessNumber + 'col0-guess').innerHTML = input;
 
