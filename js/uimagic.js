@@ -5,6 +5,7 @@ buildSearchList()
 
 let guessNumber = 1
 let gameComplete = false
+let guessLockout = false
 let shareResults = []
 
 function buildSearchList() {
@@ -28,9 +29,11 @@ function buildSearchList() {
 }
 
 function answerSubmitted() {
-    if (gameComplete) {
+    if (gameComplete || guessLockout) {
         return
     }
+
+    guessLockout = true
 
     // Get the input
     let input = document.getElementById('car-selector').value
@@ -96,6 +99,7 @@ function answerSubmitted() {
             document.getElementById('row' + guessNumber + 'col5').appendChild(details5)
 
             guessNumber++
+            guessLockout = false
 
             shareResults.push(result)
             checkWinOrLoss(result)

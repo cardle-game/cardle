@@ -1,6 +1,6 @@
 body {
     background-color: #f9fafb;
-    font-family: 'Helvetica Neue',Arial,Helvetica,sans-serif;;
+    font-family: 'Helvetica Neue',Arial,Helvetica,sans-serif;
 }
 
 /*Color Sheet*/
@@ -20,6 +20,7 @@ body {
     margin: auto;
     margin-bottom: 20px;
     margin-top: 60px;
+    zoom: 0.9;
  }
 
 #gameBoard {
@@ -33,6 +34,7 @@ body {
     justify-content: center;
     justify-self: center;
     margin: auto;
+    zoom: 0.9;
  }
 
  #car-selector {
