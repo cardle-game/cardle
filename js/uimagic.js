@@ -179,7 +179,7 @@ function share() {
 }
 
 function fallbackCopyTextToClipboard(text) {
-    var textArea = document.createElement("textarea");
+    let textArea = document.createElement("textarea");
     textArea.value = text;
 
     // Avoid scrolling to bottom
@@ -192,9 +192,10 @@ function fallbackCopyTextToClipboard(text) {
     textArea.select();
 
     try {
-        var successful = document.execCommand('copy');
-        var msg = successful ? 'successful' : 'unsuccessful';
+        let successful = document.execCommand('copy');
+        let msg = successful ? 'successful' : 'unsuccessful';
         console.log('Fallback: Copying text command was ' + msg);
+        document.getElementById('popup-share-text').style.display = 'block'
     } catch (err) {
         console.error('Fallback: Oops, unable to copy', err);
     }
@@ -207,10 +208,11 @@ function copyTextToClipboard(text) {
         fallbackCopyTextToClipboard(text)
         return
     }
-    navigator.clipboard.writeText(text).then(function() {
+
+    navigator.clipboard.writeText(text).then(() => {
         console.log('Async: Copying to clipboard was successful!')
         document.getElementById('popup-share-text').style.display = 'block'
-    }, function(err) {
+    }, (err) => {
         console.error('Async: Could not copy text: ', err)
     });
 }
